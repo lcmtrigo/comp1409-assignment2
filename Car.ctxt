@@ -1,0 +1,29 @@
+#BlueJ class context
+comment0.params=proposedLicense
+comment0.target=Car(java.lang.String)
+comment0.text=\n\ Non-default\ constructor\n\ \n\ Set\ transmission\ type\ to\ 'a',\ odometer\ instance\ variable\ to\ 50000.5,\ and\ minutesParked\ to\ 0.\n\ \n\ @param\ proposedLicense\ String\ validated\ for\ assignment\ to\ licensePlate.\n
+comment1.params=
+comment1.target=java.lang.String\ getLicensePlate()
+comment1.text=\n\ Accessor\:\ licencePlate\n\ \n\ @return\ licensePlate\ String\n
+comment2.params=
+comment2.target=char\ getTransmissionType()
+comment2.text=\n\ Accessor\:\ transmissionType\n\ \n\ @return\ transmissionType\ char\n
+comment3.params=
+comment3.target=int\ getMinutesParked()
+comment3.text=\n\ Accessor\:\ minutesParked\n\ \n\ @return\ minutesParked\ int\n
+comment4.params=proposedLicense
+comment4.target=void\ setLicensePlate(java.lang.String)
+comment4.text=\n\ Mutator\:\ licensePlate\n\ \n\ @param\ proposedLicense\ String\ conforming\ to\ ICBC\ length\ guidelines\:\ \n\ http\://www.icbc.com/vehicle-registration/licence-plates/pages/personalized-licence-plates.aspx\n\ \n\ May\ also\ be\ null.\ The\ null\ value\ represents\ a\ car\ without\ a\ plate.\ \n\ If\ validation\ fails,\ null\ will\ be\ set.\n
+comment5.params=mOrA
+comment5.target=void\ setTransmissionType(char)
+comment5.text=\n\ Mutator\:\ transmissionType\n\ \n\ Must\ be\ either\ 'm'\ or\ 'a'.\ If\ validation\ fails,\ an\ error\ message\ will\ be\ printed\ \n\ to\ the\ console.\n\ \n\ @param\ mOrA\ char\ denotes\ either\ manual\ or\ automatic\ transmissions\n
+comment6.params=
+comment6.target=java.lang.String\ readOdometer()
+comment6.text=\n\ Accessor\:\ odometerInKm\n\ \n\ @return\ odometerInKm\ +\ "\ kilometers"\ as\ String\n
+comment7.params=
+comment7.target=boolean\ isParked()
+comment7.text=\n\ Interpreter\ for\ minutesParked\n\ \n\ @return\ true\ when\ minutesParked\ \=\=\ 0.\ false\ under\ all\ other\ conditions.\n
+comment8.params=duration
+comment8.target=void\ park(int)
+comment8.text=\n\ Mutator\:\ minutesParked\n\ \n\ @param\ duration\ -\ the\ amount\ of\ time\ (minutes)\ the\ car\ was\ parked.\n
+numComments=9

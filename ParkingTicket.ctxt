@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=recordedLicense\ carParkedMinutes\ meterPaidMinutes
+comment0.target=ParkingTicket(java.lang.String,\ int,\ int)
+comment0.text=\n\ Non-default\ constructor\n\ \n\ -\ Assigns\ (the\ prefix\ Symbolic\ Constant)\ +\ count\ to\ referenceNumber.\n\ -\ increments\ count\ by\ 1\n\ -\ Assigns\ the\ parameters\ to\ similarly-named\ instance\ variables.\n\ \n\ @param\ recordedLicense\ the\ recorded\ driver's\ license\n\ @param\ carParkedMinutes\ how\ many\ minutes\ the\ car\ was\ parked\ for\n\ @param\ meterPaidMinutes\ how\ many\ minutes\ were\ paid\ for\n
+comment1.params=parker\ parkee
+comment1.target=ParkingTicket(Car,\ ParkingMeter)
+comment1.text=\n\ Overloaded\ version\ of\ the\ previous\ constructor\n\ \n\ @param\ parker\ the\ Car\ that\ is\ being\ parked\n\ @param\ \ parkee\ the\ meter\ at\ which\ it's\ being\ parked\n
+comment2.params=parker\ parkee
+comment2.target=ParkingTicket\ checkParking(Car,\ ParkingMeter)
+comment2.text=\n\ Gateway\ method.\ Checks\ if\ a\ car\ is\ overparked\n\ \n\ @param\ \ parker\ the\ car\n\ @param\ parkee\ the\ meter\n\ \n\ @return\ ticket\ a\ parking\ ticket\ if\ the\ car\ is\ overparked\ \n\ @return\ null\ under\ all\ other\ conditions.\n
+comment3.params=
+comment3.target=double\ calculateFine()
+comment3.text=\n\ Calculates\ the\ fine\ for\ overparked\ cars.\ Returns\ 0\ if\ the\ car\ is\ not\ overparked.\n\ \n\ @param\ none\n\ \n\ @return\ result\ the\ calculated\ fine\ for\ an\ overparked\ car\n
+comment4.params=minutesParked\ minutesPaid
+comment4.target=double\ penalties(double,\ double)
+comment4.text=\n\ Helper\ method\ for\ calculateFine.\ determines\ how\ much\ to\ add\ to\ the\n\ base\ parking\ ticket\ fine.\n\ \n\ @param\ minutesParked\ minutes\ the\ car\ has\ been\ parked\ for\n\ @param\ minutesPaid\ minutes\ that\ were\ paid\ for\n\ \n\ @return\ penalty\ added\ penalty\ for\ being\ overparked\ for\ more\ than\ an\ hour\n
+comment5.params=
+comment5.target=void\ printDetails()
+comment5.text=\n\ Print\ method\n\ \n\ @param\ none\n\ \n\ @return\ none\n
+numComments=6

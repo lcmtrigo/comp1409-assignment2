@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=
+comment0.target=int\ getMinutesPaid()
+comment0.text=\n\ Accessor\:\ minutesPaid\n\ \n\ @return\ int\ minutesPaid\n
+comment1.params=quantityMinutes
+comment1.target=void\ addMinutesPaid(int)
+comment1.text=\n\ Adds\ quantityMinutes\ to\ instance\ variable\ minutesPaid\n\ \n\ @param\ quantityMinutes\ \ \ must\ be\ positive\n
+numComments=2
