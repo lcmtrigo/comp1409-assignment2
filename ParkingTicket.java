@@ -1,4 +1,4 @@
-
+import java.text.DecimalFormat;
 /**
  * Write a description of class ParkingTicket here.
  * 
@@ -62,11 +62,10 @@ public class ParkingTicket
     /**
      * Gateway method. Checks if a car is overparked
      * 
-     * @param  parker the car
+     * @param parker the car
      * @param parkee the meter
      * 
-     * @return ticket a parking ticket if the car is overparked 
-     * @return null under all other conditions.
+     * @return ticket a parking ticket if the car is overparked, null otherwise
      */
    public static ParkingTicket checkParking(Car parker, ParkingMeter parkee) 
     {
@@ -83,8 +82,6 @@ public class ParkingTicket
     
    /**
      * Calculates the fine for overparked cars. Returns 0 if the car is not overparked.
-     * 
-     * @param none
      * 
      * @return result the calculated fine for an overparked car
      */
@@ -133,18 +130,16 @@ public class ParkingTicket
    
    /**
      * Print method
-     * 
-     * @param none
-     * 
-     * @return none
      */
    public void printDetails()
     {
-        System.out.printf("Ticket Number: %s\n", this.referenceNumber);
-        System.out.printf("Vehicle ID: %s\n", this.carLicensePlate);
-        System.out.printf("Parked %s minutes, paid for %s\n", this.carMinutesParked, 
-            this.meterMinutesPaid);
-        System.out.printf("Fine due:: $%.2f\n", calculateFine());
+        DecimalFormat df = new DecimalFormat();
+        df.setMinimumFractionDigits(2);
+        System.out.print("Ticket Number: " + this.referenceNumber +  "\n");
+        System.out.print("Vehicle ID \"" + this.carLicensePlate + "\"\n");
+        System.out.print("parked " +  this.carMinutesParked + 
+            " minutes, paid for " + this.meterMinutesPaid + "\n");
+        System.out.print("Fine due: $" + df.format(calculateFine()) + "\n");
     }   
     
 }
