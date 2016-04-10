@@ -22,6 +22,9 @@ public class ParkingTicket
    public static final double PER_HOUR_OVERPARKED = 10.0;
    public static final int MINUTES_PER_HOUR = 60;
    public static final double GST_SURCHARGE = 1.05;
+   public static final double NO_PENALTY = 0.0;
+   public static final int ZERO = 0;
+   public static final int TWO_DECIMAL_PLACES = 2;
 
    /**
      * Non-default constructor
@@ -92,9 +95,9 @@ public class ParkingTicket
                penalties(this.carMinutesParked, this.meterMinutesPaid) 
                ) * GST_SURCHARGE;
         } else if (Math.abs(this.carMinutesParked) <= Math.abs(this.meterMinutesPaid)) {
-            return 0.0;
+            return NO_PENALTY;
         } else {
-            return 0.0;
+            return NO_PENALTY;
         }
    }
    
@@ -109,17 +112,17 @@ public class ParkingTicket
      */
    public double penalties(double minutesParked, double minutesPaid) {
        double minutesOverparked = minutesParked - minutesPaid;
-       double penalty = 0;
+       double penalty = ZERO;
        
-       if(minutesOverparked >= 0) {
-           for (int i = 0; i <= minutesOverparked; i++) {
-               if((i > 0) && (i % MINUTES_PER_HOUR == 0)) {
+       if(minutesOverparked >= ZERO) {
+           for (int i = ZERO; i <= minutesOverparked; i++) {
+               if((i > ZERO) && (i % MINUTES_PER_HOUR == ZERO)) {
                    penalty += PER_HOUR_OVERPARKED;
                 }
            }
        } else if (minutesOverparked < 0) {
-           for (int i = 0; i >= minutesOverparked; i--) {
-               if((i < 0) && (i % MINUTES_PER_HOUR == 0)) {
+           for (int i = ZERO; i >= minutesOverparked; i--) {
+               if((i < ZERO) && (i % MINUTES_PER_HOUR == ZERO)) {
                    penalty -= PER_HOUR_OVERPARKED;
                 }
            }
@@ -134,7 +137,7 @@ public class ParkingTicket
    public void printDetails()
     {
         DecimalFormat df = new DecimalFormat();
-        df.setMinimumFractionDigits(2);
+        df.setMinimumFractionDigits(TWO_DECIMAL_PLACES);
         System.out.print("Ticket Number: " + this.referenceNumber +  "\n");
         System.out.print("Vehicle ID \"" + this.carLicensePlate + "\"\n");
         System.out.print("parked " +  this.carMinutesParked + 
